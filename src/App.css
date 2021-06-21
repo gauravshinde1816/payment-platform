@@ -9,17 +9,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
 
-.logo-container {
-  height: 100px;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.logo-container img {
-  height: 100%;
-  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-dialogue {
@@ -36,7 +29,7 @@
 
 .form-dialogue input,
 select {
-  margin-block: 10px;
+  margin-block: 5px;
   min-height: 40px;
   border: none;
   background: rgba(252, 252, 252, 0.8);
@@ -58,6 +51,7 @@ select:focus {
 }
 
 .payment {
+  background: rgba(255, 255, 255, 0.8);
   width: 100%;
   text-align: center;
 }
@@ -70,13 +64,38 @@ label {
   font-size: 18px;
 }
 
+.logo-container {
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  width: 100%;
+}
+
+.logo-container img {
+  height: 100%;
+  width: auto;
+}
+
 .payment-form {
-  margin-top: 10px;
   padding: 10px;
   padding-block: 50px;
-  background: rgba(255, 255, 255, 0.8);
   display: inline-block;
   max-width: 500px;
+}
+
+.benefits-container {
+  text-align: left;
+  padding: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+
+.benefits-head {
+  font-weight: 600;
+  min-height: 40px;
+  padding-left: 15px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 .total-amount-container {

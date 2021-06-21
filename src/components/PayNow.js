@@ -9,6 +9,16 @@ function App() {
   const [internship, setInternship] = useState({});
   const [duration, setDuration] = useState(0);
 
+  const benefits = [
+    "Remote Internships Benefits",
+    "Remote Internships Benefits",
+    "Remote Internships Benefits",
+    "Remote Internships Benefits",
+    "Remote Internships Benefits",
+    "Remote Internships Benefits",
+    "Remote Internships Benefits",
+  ];
+
   useEffect(() => {
     internshipTrack.map((intern) => {
       if (intern.course === internship) {
@@ -54,14 +64,11 @@ function App() {
     const res = await loadScript(
       "https://checkout.razorpay.com/v1/checkout.js"
     );
-
     if (!res) {
       alert("Razorpay SDK failed to load. Are you online?");
       return;
     }
-
     const result = await axios.post("http://localhost:8080/payment/orders");
-
     if (!result) {
       alert("Server error. Are you online?");
       return;
@@ -111,48 +118,67 @@ function App() {
   }
 
   return (
-    <div className="App container-fluid payment">
-      <div className="payment-form">
-        <div className="col-12 logo-container">
-          <img src={Logo} alt="" />
-        </div>
-        <h1>Payment Registration</h1>
-        <label className="col-12" for="internshipTrack">
-          Internship Track
-        </label>
-        <select
-          className="internshipTrack col-12"
-          name="internshipTrack"
-          value={internship}
-          onChange={(e) => setInternship(e.target.value)}
-        >
-          {internshipTrack.map((internship) => (
-            <option value={internship.course}>{internship.course}</option>
-          ))}
-          {/* <option>Competitive Coding</option>
-          <option>AI & ML</option>
-          <option>Could & DevOps</option>
-          <option>Web Development</option> */}
-        </select>
+    <div className="App">
+      <div className="container payment">
+        <div className="row">
+          <div className="col-12 logo-container">
+            <img src={Logo} alt="" />
+          </div>
+          <div className="col-lg-6">
+            <div className="payment-form">
+              <h1>Payment Registration</h1>
+              <label className="col-12" for="internshipTrack">
+                Internship Track
+              </label>
+              <select
+                className="internshipTrack col-12"
+                name="internshipTrack"
+                value={internship}
+                onChange={(e) => setInternship(e.target.value)}
+              >
+                {internshipTrack.map((internship) => (
+                  <option value={internship.course}>{internship.course}</option>
+                ))}
+              </select>
 
-        <label className="col-12" for="internshipTrack">
-          Duration
-        </label>
-        <select
-          className="col-12"
-          name="duration"
-          value={duration}
-          onChange={(e) => setDuration(e.target.value)}
-        >
-          <option value={3}>3 months</option>
-          <option value={6}>6 months</option>
-          <option value={12}>12 months</option>
-        </select>
-        <div className="total-amount-container">
-          Total Amount: INR {billAmount}
-        </div>
-        <div className="btn btn-success rounded-0" onClick={displayRazorpay}>
-          PayNow
+              <label className="col-12" for="internshipTrack">
+                Duration
+              </label>
+              <select
+                className="col-12"
+                name="duration"
+                value={duration}
+                onChange={(e) => setDuration(e.target.value)}
+              >
+                <option value={3}>3 months</option>
+                <option value={6}>6 months</option>
+                <option value={12}>12 months</option>
+              </select>
+              <div className="total-amount-container">
+                Total Amount: INR {billAmount}
+              </div>
+              <div
+                className="btn btn-success rounded-0 col-12"
+                onClick={displayRazorpay}
+              >
+                PayNow
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="row p-4">
+              <div className=" benefits-container">
+                <div className="col-12 benefits-head">
+                  Remote Internship Program Benefits
+                </div>
+                <ul>
+                  {benefits.map((item) => (
+                    <li className="col-12">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

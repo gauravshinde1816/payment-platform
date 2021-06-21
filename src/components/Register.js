@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Logo from "../nphsat.png";
 import axios from "axios";
-import {useHistory} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const SPREADSHEET_ID = "1_PbaaP56DmN4zrCzI4XP9PHhM6ujsx5_P0YsNIf58Xs";
 const CLIENT_ID = "";
@@ -12,7 +12,6 @@ const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
 const dateObject = new Date();
 
 function Register() {
-
   let history = useHistory();
 
   // const [firstName, setFirstName] = useState('');
@@ -65,19 +64,20 @@ function Register() {
         data
       );
       console.log(res);
-      history.push('/pay')
+      history.push("/pay");
     } catch (error) {
       console.log(error);
     }
-    window.location.replace("http://www.w3schools.com");
   };
 
   return (
     <div className="App form-container">
       <div className="form-dialogue">
         <div className="row">
-          <div className="col-12 logo-container">
-            <img src={Logo} alt="" />
+          <div className="col-12">
+            <div className="logo-container">
+              <img src={Logo} alt="" />
+            </div>
           </div>
         </div>
         <div className="col-12 my-2 bg-danger text-light px-3">
@@ -90,7 +90,10 @@ function Register() {
         </div>
         <div>
           <form className="row p-3" onSubmit={handleSubmit}>
-            <h3 className="registration-title col-lg-12"> Registration Form </h3>
+            <h3 className="registration-title col-lg-12">
+              {" "}
+              Registration Form{" "}
+            </h3>
             <div className="col-6">
               <input
                 className="input p-2"
@@ -204,11 +207,10 @@ function Register() {
               </select>
             </div>
             <div className="mt-3">
-              <div className='text-danger'>{error}</div>
+              <div className="text-danger">{error}</div>
               <button
-                className="col-12"
                 type="submit"
-                className="btn btn-success"
+                className="btn btn-success col-12 rounded-0"
               >
                 Register
               </button>
