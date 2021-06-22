@@ -1,18 +1,13 @@
 .App {
   text-align: center;
-
-  font-family: "Open Sans", sans-serif;
-
   min-height: 100vh;
   width: 100%;
-
   background: url("./back2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding-block: 50px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,10 +90,6 @@ label {
   width: auto;
 }
 
-.payment-form {
-  width: 100%;
-}
-
 .benefits-container {
   text-align: left;
   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 5px 30px 0px; */
@@ -115,6 +106,7 @@ label {
   padding-left: 15px;
   font-size: 20px;
   margin-bottom: 10px;
+  color: rgb(6, 170, 0);
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -137,12 +129,22 @@ label {
 }
 
 .details h1 {
-  font-weight: 600;
-  color: rgb(14, 163, 0);
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  text-align: left;
+  margin-top: 20px;
+  color: rgb(0, 79, 168);
+  font-family: 'Dela Gothic One', cursive;
 }
 
 .details h3 {
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  font-size: 30px;
+  /* font-weight: 600; */
+  margin-block: 10px;
+  color: cadetblue ;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 @media (max-width: 500px) {

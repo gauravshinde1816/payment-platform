@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import logo from "../logo.svg";
 import Logo from "../nphsat.png";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 
 // const SPREADSHEET_ID = "1_PbaaP56DmN4zrCzI4XP9PHhM6ujsx5_P0YsNIf58Xs";
 // const CLIENT_ID = "";
@@ -12,7 +11,6 @@ import { useHistory } from "react-router-dom";
 const dateObject = new Date();
 
 function Register() {
-  let history = useHistory();
   const [billAmount, setBillAmount] = useState("4999");
   // const [internship, setInternship] = useState({});
   // const [duration, setDuration] = useState(0);
@@ -160,7 +158,6 @@ function Register() {
         data
       );
       console.log(res);
-      history.push("/pay");
     } catch (error) {
       console.log(error);
     }
@@ -176,17 +173,18 @@ function Register() {
             </div>
           </div>
         </div>
-
         <div className="row">
           <div className="form-dialogue">
             <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-lg-7 order-2 order-lg-1">
                   <div className="details">
-                    <h1>International Remote Internship on Small Satellites (IRIS)- 2021</h1>
+                    <h1>
+                      International Remote Internship on Small Satellites
+                      (IRIS)- 2021
+                    </h1>
                     <h3>Certified Training + Remote Internship</h3>
                   </div>
-
                   <div className=" benefits-container">
                     <div className="col-12 benefits-head">
                       Remote Internship Program Benefits
@@ -250,29 +248,31 @@ function Register() {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="col-12">
-                    <input
-                      className="input p-2"
-                      name="phoneNumber"
-                      type="number"
-                      min="7777777777"
-                      value={data.phoneNumber}
-                      placeholder="Phone Number (WhatsApp Number) *"
-                      required
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-12">
-                    <input
-                      className="input p-2"
-                      name="department"
-                      type="text"
-                      v
-                      alue={data.department}
-                      placeholder="Department*"
-                      required
-                      onChange={handleChange}
-                    />
+                  <div className="row">
+                    <div className="col-6">
+                      <input
+                        className="input p-2"
+                        name="phoneNumber"
+                        type="tel"
+                        max="9999999999"
+                        value={data.phoneNumber}
+                        placeholder="Phone Number (WhatsApp Number) *"
+                        required
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="col-6">
+                      <input
+                        className="input p-2"
+                        name="department"
+                        type="text"
+                        v
+                        alue={data.department}
+                        placeholder="Department*"
+                        required
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
                   <label className=" col-12 mt-3 label-year-of-passing">
                     Year of Passing
@@ -331,36 +331,38 @@ function Register() {
                       </select>
                     </div>
                     <div className="payment-form">
-                      {/* <h3 className="registration-title ">
-                        Payment Registration
-                      </h3> */}
-                      <label className="col-12" for="internshipTrack">
-                        Internship Track
-                      </label>
-                      <select
-                        className="internshipTrack col-12"
-                        name="internshipTrack"
-                        value={data.internshipTrack}
-                        onChange={handleChange}
-                      >
-                        {internshipTrack.map((internship) => (
-                          <option>{internship.course}</option>
-                        ))}
-                      </select>
-
-                      <label className="col-12" for="internshipTrack">
-                        Duration
-                      </label>
-                      <select
-                        className="col-12"
-                        name="duration"
-                        value={data.duration}
-                        onChange={handleChange}
-                      >
-                        <option value={3}>3 months</option>
-                        <option value={6}>6 months</option>
-                        <option value={12}>12 months</option>
-                      </select>
+                      <div className="row">
+                        <div className="col-6">
+                          <label className="col-12" for="internshipTrack">
+                            Internship Track
+                          </label>
+                          <select
+                            className="internshipTrack col-12"
+                            name="internshipTrack"
+                            value={data.internshipTrack}
+                            onChange={handleChange}
+                          >
+                            {internshipTrack.map((internship) => (
+                              <option>{internship.course}</option>
+                            ))}
+                          </select>
+                        </div>
+                        <div className="col-6">
+                          <label className="col-12" for="internshipTrack">
+                            Duration
+                          </label>
+                          <select
+                            className="col-12"
+                            name="duration"
+                            value={data.duration}
+                            onChange={handleChange}
+                          >
+                            <option value={3}>3 months</option>
+                            <option value={6}>6 months</option>
+                            <option value={12}>12 months</option>
+                          </select>
+                        </div>
+                      </div>
                       <div className="total-amount-container">
                         Total Amount: INR {billAmount}
                       </div>
