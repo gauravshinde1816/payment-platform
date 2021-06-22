@@ -184,8 +184,7 @@ function Register() {
             <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-lg-7 order-2 order-lg-1">
-
-                  <div className='details'>
+                  <div className="details">
                     <h1>Remote Internship Program 2021</h1>
                     <h3>Certified Training + Remote Internship</h3>
                   </div>
