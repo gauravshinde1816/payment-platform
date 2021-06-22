@@ -118,70 +118,70 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div className="container payment">
-        <div className="row">
-          <div className="col-12 logo-container">
+    // <div className="App">
+    <div className="container payment">
+      <div className="row">
+        {/* <div className="col-12 logo-container">
             <img src={Logo} alt="" />
-          </div>
-          <div className="col-lg-6">
-            <div className="payment-form">
-              <h1>Payment Registration</h1>
-              <label className="col-12" for="internshipTrack">
-                Internship Track
-              </label>
-              <select
-                className="internshipTrack col-12"
-                name="internshipTrack"
-                value={internship}
-                onChange={(e) => setInternship(e.target.value)}
-              >
-                {internshipTrack.map((internship) => (
-                  <option value={internship.course}>{internship.course}</option>
-                ))}
-              </select>
+          </div> */}
+        <div className="col-lg-6">
+          <div className="payment-form">
+            <h1>Payment Registration</h1>
+            <label className="col-12" for="internshipTrack">
+              Internship Track
+            </label>
+            <select
+              className="internshipTrack col-12"
+              name="internshipTrack"
+              value={internship}
+              onChange={(e) => setInternship(e.target.value)}
+            >
+              {internshipTrack.map((internship) => (
+                <option value={internship.course}>{internship.course}</option>
+              ))}
+            </select>
 
-              <label className="col-12" for="internshipTrack">
-                Duration
-              </label>
-              <select
-                className="col-12"
-                name="duration"
-                value={duration}
-                onChange={(e) => setDuration(e.target.value)}
-              >
-                <option value={3}>3 months</option>
-                <option value={6}>6 months</option>
-                <option value={12}>12 months</option>
-              </select>
-              <div className="total-amount-container">
-                Total Amount: INR {billAmount}
-              </div>
-              <div
-                className="btn btn-success rounded-0 col-12"
-                onClick={displayRazorpay}
-              >
-                PayNow
-              </div>
+            <label className="col-12" for="internshipTrack">
+              Duration
+            </label>
+            <select
+              className="col-12"
+              name="duration"
+              value={duration}
+              onChange={(e) => setDuration(e.target.value)}
+            >
+              <option value={3}>3 months</option>
+              <option value={6}>6 months</option>
+              <option value={12}>12 months</option>
+            </select>
+            <div className="total-amount-container">
+              Total Amount: INR {billAmount}
+            </div>
+            <div
+              className="btn btn-success rounded-0 col-12"
+              onClick={displayRazorpay}
+            >
+              PayNow
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="row p-4">
-              <div className=" benefits-container">
-                <div className="col-12 benefits-head">
-                  Remote Internship Program Benefits
-                </div>
-                <ul>
-                  {benefits.map((item) => (
-                    <li className="col-12">{item}</li>
-                  ))}
-                </ul>
+        </div>
+        <div className="col-lg-6">
+          <div className="row p-4">
+            <div className=" benefits-container">
+              <div className="col-12 benefits-head">
+                Remote Internship Program Benefits
               </div>
+              <ul>
+                {benefits.map((item) => (
+                  <li className="col-12">{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+    // </div>
   );
 }
 
