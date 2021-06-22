@@ -44,13 +44,11 @@ function Register() {
     "December",
   ];
   const benefits = [
-    "Remote Internships Benefits",
-    "Remote Internships Benefits",
-    "Remote Internships Benefits",
-    "Remote Internships Benefits",
-    "Remote Internships Benefits",
-    "Remote Internships Benefits",
-    "Remote Internships Benefits",
+    "Online Instructor-Led Training",
+    "Industry Environment",
+    "Internship Completion Certificate",
+    "Work with Global Team",
+    "Career Guidance",
   ];
   const internshipTrack = [
     {
@@ -185,7 +183,7 @@ function Register() {
               <div className="row">
                 <div className="col-lg-7 order-2 order-lg-1">
                   <div className="details">
-                    <h1>Remote Internship Program 2021</h1>
+                    <h1>International Remote Internship on Small Satellites (IRIS)- 2021</h1>
                     <h3>Certified Training + Remote Internship</h3>
                   </div>
 
