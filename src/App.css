@@ -66,10 +66,6 @@ select:focus {
   font-weight: 600;
 }
 
-.eligibility{
-  color:red;
-}
-
 .payment {
   /* background: rgba(255, 255, 255, 0.8); */
   width: 100%;
@@ -127,15 +123,16 @@ label {
 }
 
 .details {
-  margin-block: 20px;
+  margin-block: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 5px;
 }
 
 .details h1 {
-  padding: 10px;
+  padding-bottom: 5px;
   text-align: left;
   margin-top: 20px;
   color: rgb(0, 79, 168);
@@ -143,14 +140,57 @@ label {
 }
 
 .details h3 {
-  padding: 10px;
+  padding-bottom: 5px;
   text-align: left;
   width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   /* font-weight: 600; */
-  margin-block: 10px;
   color: cadetblue ;
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+.description{
+  text-align: justify;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.eligibility{
+  text-align: left;
+  font-weight: 600;
+  color: red;
+}
+
+.track-details-container{
+  margin-block: 0px;
+  /* border-block: 1px solid rgba(0, 0, 0, 0.2); */
+  /* background-color: rgba(0, 238, 255, 0.05); */
+  text-align: left;
+  padding-block: 20px;
+  padding-inline: 10px;
+}
+
+.track-head{
+  color: cornflowerblue;
+  font-size: larger;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.track-duration{
+  margin-top: 20px;
+  font-weight: 600;
+  color: rgb(187, 0, 9);
+  text-align: center;
+}
+
+.track-platform{
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(0, 114, 0);
 }
 
 @media (max-width: 500px) {
