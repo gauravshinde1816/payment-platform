@@ -99,6 +99,7 @@ label {
   border-radius: 30px;
   margin-top: 20px;
   background: rgb(0, 0, 0, 0.01);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 0px;
   font-weight: 400;
 }
 
@@ -163,9 +164,10 @@ label {
 
 .track-details-container{
   margin-block: 0px;
-  /* border-block: 1px solid rgba(0, 0, 0, 0.2); */
+  border: 1px solid rgba(0, 0, 0, 0.2);
   /* background-color: rgba(0, 238, 255, 0.05); */
   text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 0px;
   padding-block: 20px;
   padding-inline: 10px;
 }
