@@ -163,7 +163,7 @@ label {
 }
 
 .track-details-container{
-  margin-block: 0px;
+  margin-block: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   /* background-color: rgba(0, 238, 255, 0.05); */
   text-align: left;

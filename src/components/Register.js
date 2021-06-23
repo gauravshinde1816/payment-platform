@@ -468,8 +468,8 @@ function Register() {
                       </select>
                     </div>
                     <div className="payment-form">
-                      <div className="row">
-                        <div className="col-6">
+                      {/* <div className="row"> */}
+                        {/* <div className="col-6"> */}
                           <label className="col-12" for="internshipTrack">
                             Internship Track
                           </label>
@@ -483,8 +483,8 @@ function Register() {
                               <option>{internship.course}</option>
                             ))}
                           </select>
-                        </div>
-                        <div className="col-6">
+                        {/* </div> */}
+                        {/* <div className="col-6"> */}
                           <label className="col-12" for="internshipTrack">
                             Duration
                           </label>
@@ -500,8 +500,8 @@ function Register() {
                             <option value={"8 Weeks"}> 8 Weeks </option>
                             <option value={"10 Weeks"}>10 Weeks </option>
                           </select>
-                        </div>
-                      </div>
+                        {/* </div> */}
+                      {/* </div> */}
                       <div className="total-amount-container">
                         Total Amount: INR {billAmount}
                       </div>
