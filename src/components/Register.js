@@ -8,8 +8,10 @@ import axios from "axios";
 // const API_KEY = "AIzaSyC9I4KDhG6UgVFuKbt_ED_92TVIy1KlxHA";
 // const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
 
-const details = [
+const internshipTrack = [
   {
+    course: "Track 1",
+    fees: "1499",
     duration: "2 Weeks",
     details: {
       modules: [
@@ -19,6 +21,8 @@ const details = [
     },
   },
   {
+    course: "Track 2",
+    fees: "2499",
     duration: "4 Weeks",
     details: {
       modules: [
@@ -29,6 +33,8 @@ const details = [
     },
   },
   {
+    course: "Track 3",
+    fees: "3999",
     duration: "6 Weeks",
     details: {
       modules: [
@@ -40,6 +46,8 @@ const details = [
     },
   },
   {
+    course: "Track 4",
+    fees: "5999",
     duration: "8 Weeks",
     details: {
       modules: [
@@ -52,6 +60,8 @@ const details = [
     },
   },
   {
+    course: "Track 5",
+    fees: "7999",
     duration: "10 Weeks",
     details: {
       modules: [
@@ -66,12 +76,13 @@ const details = [
   },
 ];
 
+
 const dateObject = new Date();
 
 function Register() {
   const [billAmount, setBillAmount] = useState("1499");
   const [courseDuration, setCourseDuration] = useState("2 Weeks");
-  const [currentDetails, setCurrentDetails] = useState(details[0]);
+  const [currentDetails, setCurrentDetails] = useState(internshipTrack[0].details);
   // const [internship, setInternship] = useState({});
   // const [duration, setDuration] = useState(0);
   const [data, setData] = useState({
@@ -87,20 +98,7 @@ function Register() {
     internshipTrack: "Track 1",
   });
   const [error, setError] = useState();
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+  const months = ["July", "August"];
   const benefits = [
     "Online Instructor-Led Training",
     "Industry Environment",
@@ -108,48 +106,17 @@ function Register() {
     "Work with Global Team",
     "Career Guidance",
   ];
-  const internshipTrack = [
-    {
-      course: "Track 1",
-      fees: "1499",
-      duration: "2 Weeks",
-    },
-    {
-      course: "Track 2",
-      fees: "2499",
-      duration: "4 Weeks",
-    },
-    {
-      course: "Track 3",
-      fees: "3999",
-      duration: "6 Weeks",
-    },
-    {
-      course: "Track 4",
-      fees: "5999",
-      duration: "8 Weeks",
-    },
-    {
-      course: "Track 5",
-      fees: "7999",
-      duration: "10 Weeks",
-    },
-  ];
+
 
   useEffect(() => {
     internshipTrack.map((intern) => {
       if (intern.course === data.internshipTrack) {
         setBillAmount(intern.fees);
-        setCourseDuration(intern.duration);
+        setData({...data, duration: intern.duration, internshipTrack: intern.course})
+        setCurrentDetails(intern.details);
       }
     });
-
-    details.map((detail) => {
-      if (detail.duration === data.duration) {
-        setCurrentDetails(detail);
-      }
-    });
-  }, [data.internshipTrack, data.duration]);
+  }, [data.internshipTrack]);
 
   function loadScript(src) {
     return new Promise((resolve) => {
@@ -272,7 +239,7 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     console.log(data);
     try {
       displayRazorpay();
@@ -324,24 +291,22 @@ function Register() {
                     </div>
                   </div>
                   <div className=" track-details-container">
-                    <div className="col-12 track-head">
-                      {currentDetails.duration} Track
-                    </div>
+                    <div className="col-12 track-head">{data.internshipTrack}</div>
                     <div>
-                      {currentDetails.details.modules.map((item, i) => {
+                      {currentDetails.modules.map((item, i) => {
                         return (
                           <div>
-                            <label> Module {(" ", i + 1)} </label>
-                            <div> {item} </div>
+                            <div className='module-head'> Module {(" ", i + 1)} </div>
+                            <div className='module-detail'> {item} </div>
                           </div>
                         );
                       })}
                     </div>
                     <div className="track-duration">
-                      Timings: {currentDetails.details.modeAndTiming[0]}{" "}
+                      Timings: {currentDetails.modeAndTiming[0]}{" "}
                     </div>
                     <div className="track-platform">
-                      Mode: {currentDetails.details.modeAndTiming[1]}{" "}
+                      Mode: {currentDetails.modeAndTiming[1]}{" "}
                     </div>
                   </div>
                 </div>
@@ -469,38 +434,36 @@ function Register() {
                     </div>
                     <div className="payment-form">
                       {/* <div className="row"> */}
-                        {/* <div className="col-6"> */}
-                          <label className="col-12" for="internshipTrack">
-                            Internship Track
-                          </label>
-                          <select
-                            className="internshipTrack col-12"
-                            name="internshipTrack"
-                            value={data.internshipTrack}
-                            onChange={handleChange}
-                          >
-                            {internshipTrack.map((internship) => (
-                              <option>{internship.course}</option>
-                            ))}
-                          </select>
-                        {/* </div> */}
-                        {/* <div className="col-6"> */}
-                          <label className="col-12" for="internshipTrack">
-                            Duration
-                          </label>
-                          <select
-                            className="col-12"
-                            name="duration"
-                            value={data.duration}
-                            onChange={handleChange}
-                          >
-                            <option value={"2 Weeks"}> 2 Weeks </option>
-                            <option value={"4 Weeks"}> 4 Weeks </option>
-                            <option value={"6 Weeks"}> 6 Weeks </option>
-                            <option value={"8 Weeks"}> 8 Weeks </option>
-                            <option value={"10 Weeks"}>10 Weeks </option>
-                          </select>
-                        {/* </div> */}
+                      {/* <div className="col-6"> */}
+                      <label className="col-12" for="internshipTrack">
+                        Internship Track
+                      </label>
+                      <select
+                        className="internshipTrack col-12"
+                        name="internshipTrack"
+                        value={data.internshipTrack}
+                        onChange={handleChange}
+                      >
+                        {internshipTrack.map((internship) => (
+                          <option>{internship.course}</option>
+                        ))}
+                      </select>
+                      {/* </div> */}
+                      {/* <div className="col-6"> */}
+                      <label className="col-12" for="internshipTrack">
+                        Duration
+                      </label>
+                      <select
+                        className="col-12"
+                        name="duration"
+                        value={data.duration}
+                        onChange={handleChange}
+                      >
+                        <option value={data.duration}>
+                          {data.duration}
+                        </option>
+                      </select>
+                      {/* </div> */}
                       {/* </div> */}
                       <div className="total-amount-container">
                         Total Amount: INR {billAmount}
@@ -511,7 +474,7 @@ function Register() {
                       >
                         PayNow
                       </button> */}
-                      <span className='col-12 text-danger'> {error} </span>
+                      <span className="col-12 text-danger"> {error} </span>
                       <button
                         className="btn btn-success col-12"
                         id="rzp-button1"
@@ -543,3 +506,63 @@ function Register() {
 }
 
 export default Register;
+
+
+
+// const details = [
+//   {
+//     duration: "2 Weeks",
+//     details: {
+//       modules: [
+//         "Students will learn and design antenna for small satellite communication application using industry software (Student versions or Open Source). At the end of this module every student will be able to design their own antenna for the required satellite specifications.",
+//       ],
+//       modeAndTiming: ["Monday to Friday 5 PM to 6 PM", "Google Meet"],
+//     },
+//   },
+//   {
+//     duration: "4 Weeks",
+//     details: {
+//       modules: [
+//         "Students will learn and design antenna for small satellite communication application using industry software (Student versions or Open Source). At the end of this module every student will be able to design their own antenna for the required satellite specifications.",
+//         "All students will learn and design outer body of small satellite using CAD tools (student version or open source). By using this training every student can design and development outer body of any product like smart phone, laptop, iPhone, iPad etc any devide outer body and it's analysis.",
+//       ],
+//       modeAndTiming: ["Monday to Friday 5 PM to 6 PM", "Google Meet"],
+//     },
+//   },
+//   {
+//     duration: "6 Weeks",
+//     details: {
+//       modules: [
+//         "Students will learn and design antenna for small satellite communication application using industry software (Student versions or Open Source). At the end of this module every student will be able to design their own antenna for the required satellite specifications.",
+//         "All students will learn and design outer body of small satellite using CAD tools (student version or open source). By using this training every student can design and development outer body of any product like smart phone, laptop, iPhone, iPad etc any devide outer body and it's analysis.",
+//         "We will give real sample satellite data to every student and it's analysis will be trained by using software tools.",
+//       ],
+//       modeAndTiming: ["Monday to Friday 5 PM to 6 PM", "Google Meet"],
+//     },
+//   },
+//   {
+//     duration: "8 Weeks",
+//     details: {
+//       modules: [
+//         "Students will learn and design antenna for small satellite communication application using industry software (Student versions or Open Source). At the end of this module every student will be able to design their own antenna for the required satellite specifications.",
+//         "All students will learn and design outer body of small satellite using CAD tools (student version or open source). By using this training every student can design and development outer body of any product like smart phone, laptop, iPhone, iPad etc any devide outer body and it's analysis.",
+//         "We will give real sample satellite data to every student and it's analysis will be trained by using software tools.",
+//         "Satellite data security",
+//       ],
+//       modeAndTiming: ["Monday to Friday 5 PM to 6 PM", "Google Meet"],
+//     },
+//   },
+//   {
+//     duration: "10 Weeks",
+//     details: {
+//       modules: [
+//         "Students will learn and design antenna for small satellite communication application using industry software (Student versions or Open Source). At the end of this module every student will be able to design their own antenna for the required satellite specifications.",
+//         "All students will learn and design outer body of small satellite using CAD tools (student version or open source). By using this training every student can design and development outer body of any product like smart phone, laptop, iPhone, iPad etc any devide outer body and it's analysis.",
+//         "We will give real sample satellite data to every student and it's analysis will be trained by using software tools.",
+//         "Satellite data security",
+//         "Solar Panel selection & its analysis",
+//       ],
+//       modeAndTiming: ["Monday to Friday 5 PM to 6 PM", "Google Meet"],
+//     },
+//   },
+// ];

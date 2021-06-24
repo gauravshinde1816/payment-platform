@@ -173,12 +173,12 @@ label {
 }
 
 .track-head{
-  color: cornflowerblue;
+  color: rgb(0, 51, 145);
   font-size: larger;
   font-weight: 600;
-  border-bottom: 1px solid black;
   padding-bottom: 5px;
-  font-size: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .track-duration{
@@ -199,4 +199,21 @@ label {
   .form-dialogue {
     width: 100%;
   }
+}
+
+
+.module-head{
+  border-bottom: 1px solid rgba(0, 27, 27, 0.158);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: rgb(25, 109, 0);
+  font-size: larger;
+  font-weight: bold;
+}
+
+.module-detail{
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.76);
 }
