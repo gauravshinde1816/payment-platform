@@ -20,6 +20,12 @@ function App() {
       <Route path="/">
         <Register />
       </Route>
+      <Route path="/">
+        <Register />
+      </Route>
+      <Route path="/">
+        <Register />
+      </Route>
     </Switch>
   );
 }
