@@ -7,16 +7,16 @@ import { GoogleSpreadsheet } from "google-spreadsheet";
 
 const internshipTrack = [
   {
-    course: "Technology for Smart Farming (TSF)",
-    fees: "6499",
-    duration: "3 Months",
+    course: "Small Satellite Design",
+    fees: "1499",
+    duration: "6 Months",
     details: {
       modules: [
-        "Electronics for Smart Agriculture (Live Design of Antennas for IoT Smart Farming)",
-        "AutoCAD for Agriculture product design (Live Design with real time examples)",
-        "Agricultural data Analysis using software Tools (Live Training with Examples)",
-        "Smart Farming data analysis and security using Phyton/AI /ML (Live Training with Examples)",
-        "Understanding Solar Power generation and its analysis and study for sustainable farming",
+        "Students will learn and design antenna for small satellite communication application using industry software (Student versions or Open Source). At the end of this module every student will be able to design their own antenna for the required satellite specifications.",
+        "All students will learn and design outer body of small satellite using CAD tools (student version or open source). By using this training every student can design and development outer body of any product like smart phone, laptop, iPhone, iPad etc any devide outer body and it's analysis.",
+        "We will give real sample satellite data to every student and it's analysis will be trained by using software tools.",
+        "Satellite data security",
+        "Solar Panel selection & its analysis",
       ],
       modeAndTiming: ["Monday to Friday 5 PM to 6 PM", "Google Meet"],
     },
@@ -24,7 +24,7 @@ const internshipTrack = [
   // {
   //   course: "CAD for Agri Product Design",
   //   fees: "6499",
-  //   duration: "3 Months",
+  //   duration: "6 Months",
   //   details: {
   //     modules: [
   //       "Electronics for Smart Agriculture (Live Design of Antennas for IoT Smart Farming)",
@@ -39,7 +39,7 @@ const internshipTrack = [
   // {
   //   course: "Solar Panel Seletions",
   //   fees: "6499",
-  //   duration: "3 Months",
+  //   duration: "6 Months",
   //   details: {
   //     modules: [
   //       "Electronics for Smart Agriculture (Live Design of Antennas for IoT Smart Farming)",
@@ -54,7 +54,7 @@ const internshipTrack = [
   // {
   //   course: "Data Security",
   //   fees: "6499",
-  //   duration: "3 Months",
+  //   duration: "6 Months",
   //   details: {
   //     modules: [
   //       "Electronics for Smart Agriculture (Live Design of Antennas for IoT Smart Farming)",
@@ -69,7 +69,7 @@ const internshipTrack = [
   // {
   //   course: "Real Time Data Analysis",
   //   fees: "6499",
-  //   duration: "3 Months",
+  //   duration: "6 Months",
   //   details: {
   //     modules: [
   //       "Electronics for Smart Agriculture (Live Design of Antennas for IoT Smart Farming)",
@@ -92,7 +92,7 @@ function Register() {
   const PRIVATE_KEY =
     "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrsuO7+EztKMVX\nOgf6+IEYaa8427PAt4ch7LadHXWyTmgL+s8uITUqvg0w4C/OMommYZ26HIf8InCg\nbfRvIV4CvuUmMJc46tLb+frd7o0pxRBcTITTJMPnB7vMM5qA1zM3qla89yrYyLx5\nX3Bi7GXY8q0RWnGQO61Zx3WzuKTXAHLIyD5hBvhamJVH559bvfrQV/Chhc3NLFRy\nl9gGT14IrnziSQs+nFblwcuZMzGqrmZW0jBO7EypB9aXc582CquHtYLZbIz2eeon\nqGxKCSJf49oA27mKfAy3V/2+4N1t7AkY5xvBgxoj6fNe4yEszWJIRWSQOFDIRMZv\nQdAHC2DnAgMBAAECggEAJ6Irn4A5gaUfqHrkzLIAWrpKkD1myN2Ue+hAXxQlzvr6\nWYmTuXpA45TrRpT5dAeGbrmpxwQ+/5yTkvTOr7hsEwYtrxsYTTMnaU/S8NfYDgRH\nOocPQg4CipnmZ8ShrYv/bqILU6NaaKAtoXa+YpdfCy05dgACpuCfq1G3gbzlkBtQ\nmzm95IKwKWLPz1K3k6wy9l0aFf7lv3Hk3UZMAEmf8p3X/2w0pMJqPAOFZPaII7SM\nevP50VyHQbOP18W+iPVi9uEDyAmXQee/0bz7W71s0g9U3F5BTRSQsPjl+PEWznVe\n9TaJsWYriaV7WMHGREbObB7B6zs4uh53rrfYkpR5QQKBgQDx5f6X2Vxo53njxrTY\nYzbcsKqjGPvqaMH0mCdvPN2hEzj9hHXYdPyiAsuGKlQixl+qWvuLdfZ+dmOYxFpr\nTg+2yVFwnzmf7O1c6nsr8Bo8wL2GB+60KCDi43l8hMnICe1GjVa1hsgLi9QAg1DW\n3/g6xd/SbXeHcxewja8Lf3Zp8wKBgQC1tULLhIrwLRQ/wD3ll/B3Bhbj4tG17unT\n4uoXuCfz/GaPyyOt9yB3243e8ZSDjMYieTDcQx/lyJfCtaB5YIksCoqb45n16cCB\n+jf+0OrTfV7MiBppge9wrAqFQdKWJJFIY/DOm2SaLAlozUUkKA8vlSBtAizi9tTJ\n2KV2PXHWPQKBgEFR6vLUNhj50LdKNBFukST868cI+xWsXhuPbq6iD/Lr/uqudygR\nRxr0iELdcUTGrpSQ5vYcz4gMrg5Vj1kEhkfEiyJPTL87ukjp5ILT3jHjlgn4YGPz\nphW+eVK/hMFotNLlXbG9CI3dn0zYKN8tMZmlTzBCcRF5ab86Mzd2nuIzAoGAAbud\nzHUSIiI77DO4I2VkjK4JL9ks6NBDeJrUYq+F6gTBMaPdTj5qF9qHKtYg9XQ1O4Tu\nW1tkhXt5PwkeY6nxBPOAyOXNxROam2K4f/ycELJEYiz2G4V6tBdf7k9nY7krjYYu\neLnwpqu+1zoF68daBbklWwTHSs7Rzq77PPpvCH0CgYEAjwRqgzukO4tgcXkWzA1L\n1xmz/utyEoqoItkn3oh8PkPKVA8JJT8RLYksZxxC/Vv4leQvoId6yg5C1t9W/9B4\nMr0ypgpohrtSA78fmB6kXZsgX2NTFL5yEJG7NaVjSNin5DatSUjn2x08e7QxqwdB\ne6u7rIDSEWrnqOGQDrTfGSs=\n-----END PRIVATE KEY-----\n";
   const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
-  const [billAmount, setBillAmount] = useState("6499");
+  const [billAmount, setBillAmount] = useState("1499");
   const [courseDuration, setCourseDuration] = useState("2 Weeks");
   const [currentDetails, setCurrentDetails] = useState(
     internshipTrack[0].details
@@ -108,8 +108,8 @@ function Register() {
     yearOfPassing: dateObject.getFullYear(),
     date: "8",
     month: "January",
-    duration: "3 Months",
-    internshipTrack: "Track 1",
+    duration: "6 Months",
+    internshipTrack: "Small Satellite Design",
     collegeName: "",
   });
   const [error, setError] = useState();
@@ -306,10 +306,7 @@ function Register() {
               <div className="row">
                 <div className="col-lg-7 px-4 order-2 order-lg-1">
                   <div className="details">
-                    <h1>
-                      Internship or Workshop on Technology for Smart Farming
-                      (TSF) 2021
-                    </h1>
+                    <h1>ONLINE SKILL DEVELOPMENT PROGRAM (OSDP) ON</h1>
                     <h3>Certified Training + Remote Internship</h3>
                     <div className="description col-lg-12">
                       NPHSAT Internship Deivision is purelly penned to promote
@@ -321,21 +318,16 @@ function Register() {
                       professionals and professors from various Universities
                       around World.
                     </div>
-                    <div className="description col-lg-12">
+                    {/* <div className="description col-lg-12">
                       <b>Associated career paths:</b> Farmer, Agribusiness
                       Entrepreneur, Agri Tech Scientist, Agri data analyst,
                       Agricultural Specialist, Environmental Scientist,
                       Horticulturist, Soil and Plant Scientist, Ecologist,
                       Biologist, Climatologist, Geology, Habitat Specialist,
                       Entomologist, Veterinarian, Agronomist
-                    </div>
+                    </div> */}
                     <div className="eligibility col-lg-12">
-                      Interns should pursuing an academic background in
-                      agriculture/environmental sciences(Agricultural
-                      Engineering/Polytechnic/BSc-Agriculture/BSc-Horticulture/
-                      MSc- Horticulture/ BSc-dairy/ BSc-fisheries and other
-                      allied branches), as well as a strong interest in the
-                      subject matter.
+                      <b>Eligibility: </b> For Class 10, 11, 12 Students
                     </div>
                     <br/>
                     <div className="eligibility col-lg-12">
@@ -375,10 +367,10 @@ function Register() {
                       <div className="col-lg-12">
                         Course Fee starting from{" "}
                         <strike>
-                          ₹ 9,000/-
+                          ₹ 7,000/-
                           <br />{" "}
                         </strike>
-                        ₹ 6,499/-
+                        ₹ 1,499/-
                       </div>
                     </div>
                   </div>
@@ -530,7 +522,7 @@ function Register() {
                         value={data.duration}
                         onChange={handleChange}
                       >
-                        <option value={data.duration}>3 Months</option>
+                        <option value={data.duration}>6 Months</option>
                       </select>
                       {/* </div> */}
                       {/* </div> */}

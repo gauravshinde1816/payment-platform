@@ -4,6 +4,8 @@ import { Switch, Route } from "react-router-dom";
 import Register from "./components/Register";
 import SmartFarming from "./components/smartFarming";
 import Diploma from "./components/diploma";
+import Stem from './components/stem';
+import Engineering from './components/Engineering';
 
 function App() {
   return (
@@ -14,11 +16,11 @@ function App() {
       <Route path="/diploma">
         <Diploma />
       </Route>
-      <Route path="/">
-        <Register />
+      <Route path="/stem">
+        <Stem />
       </Route>
-      <Route path="/">
-        <Register />
+      <Route path="/engineering">
+        <Engineering />
       </Route>
       <Route path="/">
         <Register />
