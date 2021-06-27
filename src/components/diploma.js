@@ -307,7 +307,7 @@ function Register() {
                 <div className="col-lg-7 px-4 order-2 order-lg-1">
                   <div className="details">
                     <h1>Small Satellite Design</h1>
-                    <h3>Certified Training + Remote Internship</h3>
+                    <h3>Industry Certified Training + Remote Internship</h3>
                     <div className="description col-lg-12">
                       NPHSAT Internship Deivision is purelly penned to promote
                       academic and industrial research among the Engineering
@@ -327,7 +327,7 @@ function Register() {
                       Entomologist, Veterinarian, Agronomist
                     </div> */}
                     <div className="eligibility col-lg-12">
-                      Eligibility: All Current Students of Engineering, All
+                      Eligibility: All Current Students of Diploma, All
                       Branches (The fee is Exclusively ONLY for INDIAN Students)
                     </div>
                     <br/>
@@ -368,7 +368,7 @@ function Register() {
                       <div className="col-lg-12">
                         Course Fee starting from{" "}
                         <strike>
-                          ₹ 9,000/-
+                          ₹ 19,000/-
                           <br />{" "}
                         </strike>
                         ₹ 7,499/-

@@ -9,7 +9,7 @@ const internshipTrack = [
   {
     course: "Small Satellite Design",
     fees: "1499",
-    duration: "6 Months",
+    duration: "3 Weeks",
     details: {
       modules: [
         "Students will learn and design antenna for small satellite communication application using industry software (Student versions or Open Source). At the end of this module every student will be able to design their own antenna for the required satellite specifications.",
@@ -108,7 +108,7 @@ function Register() {
     yearOfPassing: dateObject.getFullYear(),
     date: "8",
     month: "January",
-    duration: "6 Months",
+    duration: "3 Weeks",
     internshipTrack: "Small Satellite Design",
     collegeName: "",
   });
@@ -117,7 +117,7 @@ function Register() {
   const benefits = [
     "Online Instructor-Led Training",
     "Industry Environment",
-    "Internship Completion Certificate",
+    "Skill Development Completion Certificate",
     "Work with Global Team",
     "Career Guidance",
   ];
@@ -307,9 +307,9 @@ function Register() {
                 <div className="col-lg-7 px-4 order-2 order-lg-1">
                   <div className="details">
                     <h1>ONLINE SKILL DEVELOPMENT PROGRAM (OSDP) ON</h1>
-                    <h3>Certified Training + Remote Internship</h3>
+                    <h3>Certified Training + Remote Training</h3>
                     <div className="description col-lg-12">
-                      NPHSAT Internship Deivision is purelly penned to promote
+                      NPHSAT Skill Development Division is purelly penned to promote
                       academic and industrial research among the Engineering
                       students on Small satellites, RF antennas, Aerospace and
                       Satellite Data Security. This initiative is to give the
@@ -420,7 +420,7 @@ function Register() {
                       name="collegeName"
                       type="text"
                       value={data.phoneNumber}
-                      placeholder="College Name*"
+                      placeholder="School/College Name*"
                       required
                       onChange={handleChange}
                     />
@@ -522,7 +522,7 @@ function Register() {
                         value={data.duration}
                         onChange={handleChange}
                       >
-                        <option value={data.duration}>6 Months</option>
+                        <option value={data.duration}>3 Weeks</option>
                       </select>
                       {/* </div> */}
                       {/* </div> */}
@@ -546,7 +546,7 @@ function Register() {
 
                       <div className=" benefits-container mb-3">
                         <div className="col-12 benefits-head">
-                          Remote Internship Program Benefits
+                          Remote Training Program Benefits
                         </div>
                         <ul>
                           {benefits.map((item) => (

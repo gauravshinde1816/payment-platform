@@ -105,7 +105,7 @@ function Register() {
   const benefits = [
     "Online Instructor-Led Training",
     "Industry Environment",
-    "Internship Completion Certificate",
+    "Internship Completion E-Certificate",
     "Work with Global Team",
     "Career Guidance",
   ];
@@ -298,7 +298,7 @@ function Register() {
                       International Remote Internship on Small Satellites
                       (IRIS)- 2021
                     </h1>
-                    <h3>Certified Training + Remote Internship</h3>
+                    <h3>Industry Certified Training + Remote Internship</h3>
                     <div className="description col-lg-12">
                       NPHSAT Internship Deivision is purelly penned to promote
                       academic and industrial research among the Engineering
